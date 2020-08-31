@@ -46,21 +46,14 @@ public class UltimateDuel {
         double computerGeneratedRandValue;
         double playerGeneratedRandValue = 6;
 
-
         String input;
-
         while (computer.lifeSpan != 0 && person.lifeSpan != 0){
             computerGeneratedRandValue = Math.floor(Math.random() * (max - min) + min);
-
             Scanner sc = new Scanner(System.in);
             input = sc.nextLine();
-
             if(input.equals("h")){
                 playerGeneratedRandValue = Math.floor(Math.random() * (max - min) + min);
-
             }
-
-
             if(playerGeneratedRandValue == determinedRandValue){
                 computer.lifeSpan -= person.weapon.weaponStrength;
                 System.out.print("Yeah Take this\n");
@@ -70,19 +63,13 @@ public class UltimateDuel {
                 System.out.print("Ouch!\n");
                 System.out.print( person.lifeSpan +"\n");
             }else{
-
                 System.out.print("you guys are not hitting yourselves\n");
             }
-
         }
-
         if(computer.lifeSpan == 0){
             System.out.print("You have won against your Opponent");
         }else if (person.lifeSpan == 0){
             System.out.print("your Opponent won!");
         }
-
     }
-
-
 }
